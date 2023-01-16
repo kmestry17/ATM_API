@@ -1,0 +1,40 @@
+--app_metadata
+==============================================================
+--GET all ATM user details
+http://localhost:9000/users
+
+--GET check balance
+http://localhost:9000/users/63bbbe1bc337107e75ff64df/2598/CB
+
+--GET view details
+http://localhost:9000/users/63bbbe1bc337107e75ff64df/2598/VD
+
+--PATCH deposit
+http://localhost:9000/users/63bbbe1bc337107e75ff64df/2598/D
+
+--PATCH withdraw
+http://localhost:9000/users/63bbbe1bc337107e75ff64df/2598/W
+
+{
+	"amt": "20583",
+}
+
+--POST register new users
+http://localhost:9000/users
+{
+	"custId": "9867771425",
+	"custName": "Deepali",
+	"accountPin": "1465",
+	"accountBalance": "80000"
+}
+
+--
+http://localhost:9000/aliens
+
+http://localhost:9000/users
+
+--init mongodb
+mongod
+
+--app execution
+npm start run
